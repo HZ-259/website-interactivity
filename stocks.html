@@ -19,31 +19,6 @@
     <p>Latest Date: <span id="latest-date">some placeholder content</span></p>
     <p>Latest Closing Price: <span id="latest-closing-price">some placeholder content</span></p>
     
-    <div id="my-chart-container"></div>
-
-<script>
-  chartOptions = {
-    chart: {
-      type: 'bar'
-    },
-    title: {
-      text: 'Food Consumption'
-    },
-    xAxis: {
-      categories: ['Apples', 'Bananas', 'Cookies']
-    },
-    yAxis: {
-      title: {
-        text: 'Type of food eaten'
-      }
-    },
-    series: [
-      {name: 'Cookie Monster', data: [0, 0, 11]},
-      {name: 'Santa Claus', data: [2, 3, 8]}
-    ]
-  }
-  Highcharts.chart('my-chart-container', chartOptions)
-</script>
 
     <script>
       // FYI: this is JavaScript
@@ -88,7 +63,6 @@
             console.log("LATEST DATE:", latestDate)
             var latestClose = tsd[latestDate]["4. close"]
             console.log("LATEST CLOSING PRICE:", latestClose)
-
             // update page contents:
             latestDateParagraph.innerHTML = latestDate
             latestPriceParagraph.innerHTML = "$" + latestClose
@@ -100,7 +74,8 @@
 
       // also update when a stock is selected:
       stockSelector.addEventListener("change", updateStockData, false)
-
     </script>
+
+
   </body>
 </html>
